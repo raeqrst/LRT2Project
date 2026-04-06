@@ -1,3 +1,4 @@
+// COMP 019 - Activity 1: Git Implementation
 using System;
 
 class Program
@@ -12,7 +13,7 @@ class Program
         string[] stations = {
             "Recto", "Legarda", "Pureza", "V. Mapa", "J. Ruiz",
             "Gilmore", "Betty Go-Belmonte", "Cubao", "Anonas",
-            "Katipunan", "Santolan", "Marikina", "Antipolo"
+            "Katipunan", "Santolan", "Marikina", "Antipolo", "TEST STATION"
         };
 
         Console.WriteLine("Stations:");
