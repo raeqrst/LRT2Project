@@ -6,7 +6,7 @@ class Program
     {
         Console.WriteLine("LRT-2 EMERGENCY ADVISORY - MARCH 2026");
         Console.WriteLine("To alleviate the impact of rising FUEL and OIL prices,");
-        Console.WriteLine("a 50% FARE REDUCTION is applied to ALL journeys");
+        Console.WriteLine("a 20% FARE REDUCTION is applied to ALL journeys");
         Console.WriteLine("until further notice.");
 
         string[] stations = {
@@ -29,7 +29,7 @@ class Program
 
         int distance = Math.Abs(end - start);
 
-        // LATEST STANDARD FARE MATRIX (Before 50% Discount)
+        // LATEST STANDARD FARE MATRIX (Before 20% Discount)
         double standardFare;
 
         if (distance == 0) standardFare = 0;
@@ -38,15 +38,15 @@ class Program
         else if (distance <= 9) standardFare = 27.00;
         else standardFare = 35.00;                   // Standard Max
 
-        // APPLY THE 2026 50% EMERGENCY DISCOUNT
-        double emergencyDiscount = standardFare * 0.50;
+        // APPLY THE 2026 20% EMERGENCY DISCOUNT
+        double emergencyDiscount = standardFare * 0.20;
         double finalFare = standardFare - emergencyDiscount;
 
         // OUTPUT SUMMARY
         Console.WriteLine("\n===== FARE COMPUTATION =====");
         Console.WriteLine("Route: " + stations[start - 1] + " to " + stations[end - 1]);
         Console.WriteLine("Standard Base Fare:   ₱" + standardFare.ToString("0.00"));
-        Console.WriteLine("Oil Hike Discount:   -₱" + emergencyDiscount.ToString("0.00") + " (50% OFF)");
+        Console.WriteLine("Oil Hike Discount:   -₱" + emergencyDiscount.ToString("0.00") + " (20% OFF)");
         Console.WriteLine("----------------------------");
         Console.WriteLine("TOTAL TO PAY:         ₱" + finalFare.ToString("0.00"));
         Console.WriteLine("============================");
